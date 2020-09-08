@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--cluster config user object construct-->
+    <bean id="student" class="project002.cystudy.spring5.collection.Student">
+        <property name="courses">
+            <array>
+                <value>java</value>
+                <value>jsp</value>
+                <value>dbs</value>
+                <value>vue</value>
+                <value>nginx</value>
+                <value>tomcat</value>
+            </array>
+        </property>
+
+        <property name="list">
+            <list>
+                <value>java1</value>
+                <value>jsp1</value>
+                <value>dbs1</value>
+                <value>vue1</value>
+                <value>nginx1</value>
+                <value>tomcat1</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="java" value="JAVA"></entry>
+                <entry key="c" value="C"></entry>
+            </map>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>msql</value>
+                <value>redis</value>
+            </set>
+        </property>
+
+        <property name="coursesList">
+            <list>
+                <ref bean="course001"></ref>
+                <ref bean="course002"></ref>
+                <ref bean="course003"></ref>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="course001" class="project002.cystudy.spring5.collection.Courses">
+        <property name="cname" value="java"></property>
+    </bean>
+    <bean id="course002" class="project002.cystudy.spring5.collection.Courses">
+        <property name="cname" value="c"></property>
+    </bean>
+    <bean id="course003" class="project002.cystudy.spring5.collection.Courses">
+        <property name="cname" value="c++"></property>
+    </bean>
+
+
+
+
+</beans>
